@@ -67,7 +67,15 @@ qqnorm(colMeans(edist), col="grey70")
 qqline(colMeans(edist), col="darkred")
 ```
 
+### Tooth Analysis
+.6 + c(-1,1)*qnorm(.975)*sqrt(.6*.4/100) // %95 percent confident after receiving 60 of 100 in a poll
+binom.test(60,100)$conf.int // alternative approach
 
+// Better alternative for pump with 5 failures every 94.32 days.
+poisson.test(5,94.32)$conf
+[1] 0.01721254 0.12371005
+attr(,"conf.level")
+[1] 0.95
 ### References
 1. http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/
 2. http://stackoverflow.com/questions/23709060/change-r-markdown-plot-width
